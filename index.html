@@ -3,189 +3,212 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Atul Sharma | Data Science</title>
+  <title>Atul Sharma | Data Science & Decision Intelligence</title>
 
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #ffffff;
-      color: #111;
+    :root {
+      --bg: #ffffff;
+      --text: #111;
+      --muted: #555;
+      --card: #f9f9f9;
+      --border: #e6e6e6;
+      --accent: #2563eb;
     }
 
-    .wrap {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 64px 20px;
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 980px;
+      margin: auto;
+      padding: 56px 20px;
     }
 
     .kicker {
-      font-size: 13px;
-      letter-spacing: 0.12em;
       text-transform: uppercase;
-      opacity: 0.7;
+      letter-spacing: 0.12em;
+      font-size: 13px;
+      color: var(--muted);
     }
 
-    .headline {
-      margin: 12px 0 10px;
+    h1 {
       font-size: 46px;
-      line-height: 1.1;
+      margin: 10px 0;
     }
 
-    .subhead {
-      font-size: 18px;
+    .subtitle {
       max-width: 70ch;
-      opacity: 0.85;
+      font-size: 18px;
+      color: var(--muted);
+      line-height: 1.6;
     }
 
     /* FLOW */
     .flow {
-      margin-top: 36px;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin: 36px 0;
     }
 
     .step {
-      padding: 14px 18px;
-      text-align: center;
+      background: var(--card);
+      border: 1px solid var(--border);
       border-radius: 999px;
-      border: 1px solid rgba(0,0,0,0.12);
-      background: #fff;
+      padding: 14px;
+      text-align: center;
       font-weight: 600;
-      transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease;
+      transition: transform .2s ease, box-shadow .2s ease;
     }
 
     .step:hover {
-      transform: translateY(-6px) scale(1.04);
-      box-shadow: 0 18px 40px rgba(0,120,255,0.25);
-      background: linear-gradient(135deg,#f2f7ff,#ffffff);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
     }
 
-    .step.active {
-      box-shadow:
-        0 0 0 2px rgba(0,120,255,0.25),
-        0 20px 45px rgba(0,120,255,0.35);
-      background: linear-gradient(135deg,#eaf3ff,#ffffff);
-    }
-
-    /* SECTIONS */
-    .section {
+    section {
       margin-top: 56px;
     }
 
-    .section h2 {
+    h2 {
       font-size: 28px;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
       gap: 18px;
     }
 
     .card {
-      border-radius: 18px;
-      padding: 22px;
-      border: 1px solid rgba(0,0,0,0.08);
-      box-shadow: 0 10px 28px rgba(0,0,0,0.06);
-      background: #fff;
-      transition: transform 200ms ease, box-shadow 200ms ease;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      transition: transform .2s ease, box-shadow .2s ease;
     }
 
     .card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+      box-shadow: 0 12px 32px rgba(0,0,0,.08);
     }
 
     .card h3 {
       margin-top: 0;
     }
 
-    .muted {
-      opacity: 0.85;
-    }
-
     .links a {
-      margin-right: 16px;
-      font-weight: 600;
+      margin-right: 14px;
+      color: var(--accent);
       text-decoration: none;
+      font-weight: 500;
     }
 
     .links a:hover {
       text-decoration: underline;
     }
 
-    @media (max-width: 800px) {
-      .flow {
-        grid-template-columns: 1fr;
-      }
-      .grid {
-        grid-template-columns: 1fr;
-      }
+    footer {
+      margin-top: 80px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
     }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <div class="kicker">Data-driven decision making</div>
-    <div class="headline">Atul Sharma</div>
-    <div class="subhead">
-      I build interpretable machine learning systems that turn real-world data into
-      measurable decisions — with a focus on risk modeling, evaluation, and explainability.
-    </div>
+  <div class="container">
 
-    <!-- FLOW -->
-    <div class="flow" id="decisionFlow">
+    <div class="kicker">Data-Driven Decision Making</div>
+    <h1>Atul Sharma</h1>
+    <p class="subtitle">
+      Analytics-focused data scientist building interpretable machine learning systems
+      that turn real-world data into measurable decisions.
+      Specialized in credit risk modeling, evaluation, and explainability.
+    </p>
+
+    <div class="flow">
       <div class="step">📊 Data</div>
       <div class="step">🤖 Model</div>
       <div class="step">📈 Insight</div>
       <div class="step">✅ Decision</div>
     </div>
 
-    <!-- WORK -->
-    <div class="section">
-      <h2>Featured Work</h2>
+    <section>
+      <h2>Featured Projects</h2>
       <div class="grid">
+
         <div class="card">
           <h3>Interpretable Credit Risk Modeling</h3>
-          <p class="muted">
+          <p>
             LendingClub loan default prediction using Logistic Regression,
-            Decision Tree, and XGBoost. Evaluated with ROC-AUC (~0.70) and
-            feature importance for interpretability.
+            Decision Trees, and XGBoost. ROC-AUC ~0.70 with feature importance
+            and explainability.
           </p>
-          <p class="links">
-            <a href="https://github.com/atulsharma3858/credit-risk-ml-project" target="_blank">GitHub Repo →</a>
-            <a href="https://github.com/atulsharma3858/credit-risk-ml-project/tree/main/paper" target="_blank">Paper PDF →</a>
+          <div class="links">
+            <a href="https://github.com/atulsharma3858/credit-risk-ml-project" target="_blank">GitHub →</a>
+            <a href="https://github.com/atulsharma3858/credit-risk-ml-project/tree/main/paper" target="_blank">Paper →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>JPMorgan Quantitative Research (Forage)</h3>
+          <p>
+            Estimated Probability of Default (PD), FICO quantization,
+            and monotonic risk bucketing using Python and dynamic programming.
           </p>
         </div>
 
         <div class="card">
-          <h3>About</h3>
-          <p class="muted">
-            Graduate student in Big Data Science (Washington, D.C.).
-            Interested in applied ML, analytics engineering, and decision science.
-          </p>
-          <p class="links">
-            <a href="https://www.linkedin.com/in/atul-sharma-3858" target="_blank">LinkedIn →</a>
-            <a href="https://github.com/atulsharma3858" target="_blank">GitHub →</a>
+          <h3>British Airways – Data Science Simulation</h3>
+          <p>
+            Web-scraped customer reviews, performed EDA, and modeled buying behavior.
           </p>
         </div>
+
+        <div class="card">
+          <h3>Deloitte & Bank of America Simulations</h3>
+          <p>
+            Business analytics, Tableau dashboards, SQL analysis,
+            and client-facing financial insights.
+          </p>
+        </div>
+
       </div>
-    </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <p>
+        Python, SQL, Machine Learning, Credit Risk (PD),
+        Statistics, Data Visualization (Tableau, Power BI),
+        ETL, Data Quality, Decision Science
+      </p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <p>
+        <strong>M.S. Big Data Science</strong> — University of the Potomac (GPA 4.0)<br>
+        <strong>B.A. LL.B.</strong> — Maharishi Markandeshwar University
+      </p>
+      <p><em>F-1 Student | STEM OPT Eligible</em></p>
+    </section>
+
+    <footer>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/atul-sharma-3858" target="_blank">LinkedIn</a>
+        <a href="https://github.com/atulsharma3858" target="_blank">GitHub</a>
+      </div>
+    </footer>
+
   </div>
-
-  <!-- PIPELINE ANIMATION -->
-  <script>
-    const steps = document.querySelectorAll("#decisionFlow .step");
-    let current = 0;
-
-    setInterval(() => {
-      steps.forEach(s => s.classList.remove("active"));
-      steps[current].classList.add("active");
-      current = (current + 1) % steps.length;
-    }, 1400);
-  </script>
 </body>
 </html>
